@@ -1,0 +1,262 @@
+.container {
+    display: grid;
+    background-color: black;
+    grid-template-columns: 450px auto;
+    grid-template-rows: 300px 300px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+}
+.HEAD{
+    height: 20px;
+    width: 100vw;
+}
+
+.box {
+    border: 3px;
+}
+
+.b1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-top-left-radius: 30px;
+}
+
+.b1 h2 {
+    color: azure;
+}
+
+.b1 p {
+    padding-left: 10px;
+    color: azure;
+    text-decoration: underline;
+}
+
+.b2 {
+    border-top-right-radius: 30px;
+}
+
+.b2 h1 {
+    text-align: left;
+    color: azure;
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.expertise {
+    display: flex;
+    justify-content: center;
+    height: 320px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 4px;
+    border-radius: 30px;
+}
+
+.fitem {
+    margin: 50px;
+    height: 200px;
+    width: 200px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding-left: 90px;
+    padding-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 550px;
+    width: 100vw;
+    row-gap: 5px;
+    grid-gap: 5px;
+    column-gap: 5px;
+    background-color: azure;
+    border: 9px solid;
+    border-radius: 30px;
+}
+
+.skill {
+    border: 2px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin: 15px;
+}
+
+.sk1 {
+    grid-row: 1/3;
+}
+
+.box {
+    height: 100%;
+    background-color: #52ab98;
+    text-align: center;
+}
+
+.education {
+    height: 300px;
+    width: 100%;
+    color: black;
+    background-color: azure;
+    border: 2px;
+    border-radius: 30px;
+}
+.educ1{
+    height: 100px; 
+    width: 60%; 
+    background-color:grey; 
+    margin-left: 200px; 
+    border-radius: 10px;
+}
+.educ1  p{
+    padding-left: 20px; 
+    padding-top: 10px;
+}
+
+.bachelor {
+    padding-left: 40px;
+}
+
+.social_media {
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    grid-template-rows: 100%;
+    background-color: aliceblue;
+    height: 150px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 30px;
+    border: 5px solid;
+}
+
+.media {
+    text-align: center;
+    border-radius: 30px;
+}
+
+.me {
+    text-align: center;
+    border: 2px;
+    padding: 20px;
+    color: azure;
+}
+
+ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: azure;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul:hover li a {
+    color: #30edf4;
+}
+
+ul:hover li a:not(:hover) {
+    color: azure;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+ul li {
+    list-style: none;
+}
+
+.about {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+}
+
+.me {
+    width: 280px;
+    padding: 20px;
+}
+.blogs{
+    height: 385px; 
+    width:100% ; 
+    border-radius: 20px; 
+    background-color: grey; 
+    margin: 4px;
+}
+
+/* Media queries for smaller screens */
+@media screen and (min-width: 468px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: 1400px;
+        width:760px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns:repeat(2, 1fr);
+        /* Adjusted the first column to occupy the entire first row */
+        grid-template-rows: repeat(6, 1fr);
+        height: 1200px;
+        width: 100vw;
+        row-gap: 3px;
+        grid-gap: 3px;
+        column-gap: 3px;
+        background-color: azure;
+        border: 5px solid;
+        border-radius: 10px;
+    }
+    
+        .grid> :nth-child(1) {
+            grid-column: span 2;
+            /* Make the first div span all three columns in the first row */
+        }
+        
+    }
+    .education {
+        height: 380px;
+        width: 100%;
+        color: black;
+        background-color: azure;
+        border: 2px;
+        border-radius: 20px;
+    }
+    .bachelor{
+        height:430px;
+        width:100vw;
+        background-color: #000;
+    }
+     .bachelor .educ1{
+        width: 80vw;
+        height: 800px;
+        padding: 7%;
+        margin:10px;
+
+    }
+    .
+}
+
+/* Media queries for tablets */
+@media screen and (max-width: 600px) and (min-width:400px) {
+    .container {
+        grid-template-rows: 200px auto;
+    }
+}
+
+/* Media queries for smartphones */
+@media (max-width: 400px) and (min-width:550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+        font-size: medium;
+        width: 100vw;
+        height: 300vh;
+    }
+    .nav{
+        width: 100vw;
+        height: 100vh;
+    }
+}
